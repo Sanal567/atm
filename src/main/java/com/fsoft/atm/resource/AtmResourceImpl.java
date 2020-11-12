@@ -1,9 +1,6 @@
-package com.fsoft.atm.controller;
+package com.fsoft.atm.resource;
 
-import java.util.HashMap;
 import java.util.Map;
-
-import com.fsoft.atm.service.AtmServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.fsoft.atm.service.AtmServiceImpl;
 
 @RestController
 public class AtmResourceImpl implements AtmResource {
@@ -31,12 +30,12 @@ public class AtmResourceImpl implements AtmResource {
         return atmService.withdraw(withdrawlAmount);
     }
 
-    @GetMapping("/")
-    public Map<Long, Long> testMapInput() {
-        Map<Long, Long> map = new HashMap<>();
-        map.put(1L, 1L);
-        map.put(2L, 2L);
-        return map;
-    }
+//    @GetMapping("/")
+//    public Map<Long, Long> testMapInput() {
+//        Map<Long, Long> map = new HashMap<>();
+//        map.put(1L, 1L);
+//        map.put(2L, 2L);
+//        return map;
+//    }
 
 }

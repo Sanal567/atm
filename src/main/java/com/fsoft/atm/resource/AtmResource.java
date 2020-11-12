@@ -1,4 +1,4 @@
-package com.fsoft.atm.controller;
+package com.fsoft.atm.resource;
 
 import java.util.Map;
 
